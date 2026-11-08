@@ -28,8 +28,12 @@
 
 .progress__arc {
 	stroke: var(--progress-color);
-	stroke-linecap: round;
 	/* Окружность в SVG начинается с 3 часов, поворот для 12ти часов*/
 	transform: rotate(-90deg);
 	transform-origin: 50% 50%;
+}
+
+/* Пустая дуга */
+.progress__arc--empty {
+	opacity: 0;
 }
