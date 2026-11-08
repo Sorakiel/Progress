@@ -1,0 +1,35 @@
+/* Блок Progress.
+   Цвета и размер задал переменными, чтобы блок было легко переиспользовать */
+.progress {
+	--progress-color: #005dff;
+	--progress-track: #eef3f6;
+	--progress-size: 120px;
+
+	width: var(--progress-size);
+	height: var(--progress-size);
+}
+
+.progress__svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+/* Трек и дуга обводка без заливки */
+.progress__track,
+.progress__arc {
+	fill: none;
+	stroke-width: 8;
+}
+
+.progress__track {
+	stroke: var(--progress-track);
+}
+
+.progress__arc {
+	stroke: var(--progress-color);
+	stroke-linecap: round;
+	/* Окружность в SVG начинается с 3 часов, поворот для 12ти часов*/
+	transform: rotate(-90deg);
+	transform-origin: 50% 50%;
+}

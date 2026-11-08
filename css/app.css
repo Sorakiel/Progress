@@ -1,0 +1,81 @@
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	font-family: system-ui, sans-serif;
+	font-size: 14px;
+	color: #000;
+	background: #fff;
+}
+
+/* Страница: сверху кольцо, снизу управления */
+.app {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.app__title {
+	position: absolute;
+	top: 25px;
+	left: 20px;
+	margin: 0;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.app__block {
+	flex: 3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.app__controls {
+	flex: 2;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.controls {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.controls__row {
+	display: flex;
+	align-items: center;
+	gap: 22px;
+}
+
+/* Поле Value в виде таблетки */
+.controls__value {
+	width: 48px;
+	height: 28px;
+	padding: 0;
+	border: 1px solid #000;
+	border-radius: 14px;
+	text-align: center;
+	font-size: 16px;
+}
+/* Альбомная ориентация: прогресс слева, управление справа */
+@media (orientation: landscape) {
+	.app {
+		flex-direction: row;
+	}
+
+	.app__controls {
+		align-items: center;
+		justify-content: flex-start;
+	}
+}

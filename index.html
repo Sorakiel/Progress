@@ -9,12 +9,38 @@
 	</head>
 	<body>
 		<main class="app">
+			<h1 class="app__title">Progress</h1>
 			<section class="app__block">
-				<div class="progress">
-					<svg class="progress__svg" viewBox="0 0 100 100">
-						<circle class="progress__track" cx="50" cy="50" r="45"></circle>
-						<circle class="progress__arc" cx="50" cy="50" r="45"></circle>
-					</svg>
+				<section class="app__block">
+					<div class="progress">
+						<svg class="progress__svg" viewBox="0 0 100 100">
+							<circle class="progress__track" cx="50" cy="50" r="45"></circle>
+							<circle class="progress__arc" cx="50" cy="50" r="45"></circle>
+						</svg>
+					</div>
+				</section>
+			</section>
+
+			<section class="app__controls">
+				<div class="controls">
+					<label class="controls__row">
+						<input
+							class="controls__value"
+							id="value"
+							type="text"
+							inputmode="numeric"
+							value="0"
+						/>
+						<span>Value</span>
+					</label>
+					<label class="controls__row">
+						<input id="animate" type="checkbox" />
+						<span>Animate</span>
+					</label>
+					<label class="controls__row">
+						<input id="hide" type="checkbox" />
+						<span>Hide</span>
+					</label>
 				</div>
 			</section>
 		</main>
