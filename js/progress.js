@@ -33,4 +33,9 @@ class Progress {
 	setAnimated(isAnimated) {
 		this.element.classList.toggle('progress--animated', isAnimated)
 	}
+
+	// Скрывает или показывает блок
+	setHidden(isHidden) {
+		this.element.classList.toggle('progress--hidden', isHidden)
+	}
 }

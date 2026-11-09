@@ -24,3 +24,12 @@ animateInput.addEventListener('change', function () {
 
 // Начальное состояние берём из переключателя (по умолчанию включён)
 progress.setAnimated(animateInput.checked)
+
+const hideInput = document.querySelector('#hide')
+
+hideInput.addEventListener('change', function () {
+	progress.setHidden(hideInput.checked)
+})
+
+// Начальное состояние берём из переключателя (по умолчанию выключен)
+progress.setHidden(hideInput.checked)

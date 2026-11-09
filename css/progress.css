@@ -48,3 +48,8 @@
 		transform: rotate(360deg);
 	}
 }
+
+/* Состояние Hidden */
+.progress--hidden {
+	visibility: hidden;
+}
