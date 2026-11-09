@@ -37,3 +37,14 @@
 .progress__arc--empty {
 	opacity: 0;
 }
+
+/* Состояние Animated: блок вращается по часовой стрелке */
+.progress--animated .progress__svg {
+	animation: progress-rotate 2s linear infinite;
+}
+
+@keyframes progress-rotate {
+	to {
+		transform: rotate(360deg);
+	}
+}

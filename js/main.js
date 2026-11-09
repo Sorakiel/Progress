@@ -15,3 +15,12 @@ valueInput.addEventListener('change', function () {
 	// Если поле пустое, оставляем прежнее значение, но обновляем поле, чтобы убрать лишние нули
 	valueInput.value = progress.value
 })
+
+const animateInput = document.querySelector('#animate')
+
+animateInput.addEventListener('change', function () {
+	progress.setAnimated(animateInput.checked)
+})
+
+// Начальное состояние берём из переключателя (по умолчанию включён)
+progress.setAnimated(animateInput.checked)

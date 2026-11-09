@@ -28,4 +28,9 @@ class Progress {
 		const offset = this.length * (1 - this.value / 100)
 		this.arc.setAttribute('stroke-dashoffset', offset)
 	}
+
+	// Включает или выключает вращение
+	setAnimated(isAnimated) {
+		this.element.classList.toggle('progress--animated', isAnimated)
+	}
 }
